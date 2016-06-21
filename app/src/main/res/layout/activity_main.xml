@@ -10,55 +10,67 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.vktoken.MainActivity">
 
-    <Button
-        android:id="@+id/btn_get_token"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Get Token"/>
-
-    <RelativeLayout
-        android:id="@+id/rl_results"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        tools:visiblity="visible"
-        android:visibility="gone"
-        android:layout_margin="10dp">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_token_holder"
+        <Button
+            android:id="@+id/btn_get_token"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
-            android:textStyle="bold"
-            android:text="Token:"/>
+            android:text="Get Token"/>
 
-        <TextView
-            android:id="@+id/tv_token"
+        <Button
+            android:id="@+id/btn_test_proxy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/tv_token_holder"
-            tools:text="asdagag1312512WQFsafqwtgqgsgsaga"
-            android:textIsSelectable="true"/>
+            android:text="Test Proxy"/>
 
-        <TextView
-            android:id="@+id/tv_expires_holder"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/rl_results"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_token"
-            android:layout_marginRight="8dp"
-            android:textStyle="bold"
-            android:text="Expires in:"/>
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            tools:visiblity="visible">
 
-        <TextView
-            android:id="@+id/tv_expires"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/tv_expires_holder"
-            android:layout_toRightOf="@+id/tv_expires_holder"
-            tools:text="asdagag1312512WQFsafqwtgqgsgsaga"
-            android:textIsSelectable="true"/>
+            <TextView
+                android:id="@+id/tv_token_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="Token:"
+                android:textStyle="bold"/>
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_token"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_token_holder"
+                android:textIsSelectable="true"
+                tools:text="asdagag1312512WQFsafqwtgqgsgsaga"/>
+
+            <TextView
+                android:id="@+id/tv_expires_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_token"
+                android:layout_marginRight="8dp"
+                android:text="Expires in:"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_expires"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_expires_holder"
+                android:layout_toRightOf="@+id/tv_expires_holder"
+                android:textIsSelectable="true"
+                tools:text="asdagag1312512WQFsafqwtgqgsgsaga"/>
+
+        </RelativeLayout>
+    </LinearLayout>
 </RelativeLayout>

@@ -22,12 +22,6 @@
             android:name="com.vk.sdk.VKServiceActivity"
             android:label="ServiceActivity"
             android:theme="@style/VK.Transparent"/>
-
-        <service
-            android:name=".ProxyService"
-            android:enabled="true"
-            android:exported="false">
-        </service>
     </application>
 
 </manifest>

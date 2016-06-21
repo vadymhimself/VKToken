@@ -17,13 +17,23 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
+    val proxyServer = ProxyServer()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // get package fingerprint
         Log.e("Fingerprints", VKUtil.getCertificateFingerprint(this, packageName).asString())
+
         btn_get_token.setOnClickListener { VKSdk.login(this, "messages, notify, offline, friends, wall") }
-        startService<ProxyService>()
+        btn_test_proxy.setOnClickListener { proxyServer.test() }
+
+        proxyServer.start()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        proxyServer.stop()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
