@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.vktoken.MainActivity">
+
+    <Button
+        android:id="@+id/btn_get_token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Get Token"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        tools:visiblity="visible"
+        android:visibility="gone"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tv_token_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:textStyle="bold"
+            android:text="Token:"/>
+
+        <TextView
+            android:id="@+id/tv_token"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_token_holder"
+            tools:text="asdagag1312512WQFsafqwtgqgsgsaga"
+            android:textIsSelectable="true"/>
+
+        <TextView
+            android:id="@+id/tv_expires_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_token"
+            android:layout_marginRight="8dp"
+            android:textStyle="bold"
+            android:text="Expires in:"/>
+
+        <TextView
+            android:id="@+id/tv_expires"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_expires_holder"
+            android:layout_toRightOf="@+id/tv_expires_holder"
+            tools:text="asdagag1312512WQFsafqwtgqgsgsaga"
+            android:textIsSelectable="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>
